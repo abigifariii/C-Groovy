@@ -1,0 +1,410 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Figtree", sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to left top, black, #3966fd);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(3px);
+  position: fixed;
+  width: 85%;
+  left: 8%;
+  top: 6%;
+  border-radius: 17px;
+  border: 2px solid #a4a4a4;
+  z-index: 9999;
+  transition: all 300ms ease-in-out;
+}
+
+.navbar h1 {
+  color: white;
+  cursor: pointer;
+}
+
+.navbar h1 span {
+  color: #14ffec;
+}
+
+.navbar .menu a {
+  text-decoration: none;
+  color: white;
+  transition: 0.5s;
+  position: relative;
+  font-weight: 400;
+}
+
+.btn-register {
+  display: none;
+}
+
+.navbar .menu a.active {
+  color: #14ffec;
+  font-weight: 700;
+}
+
+.navbar .menu a:hover {
+  color: #14ffec;
+}
+
+.navbar button {
+  padding: 10px 22px;
+  border-radius: 5px;
+  border: 0px none;
+  background-color: #14ffec;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.4s;
+  a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+  }
+}
+
+.navbar button:hover {
+  background-color: #00a194;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+
+/* Dropdown styles */
+.dropdown-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dropdown-arrow {
+  font-size: 10px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  min-width: 160px;
+  border-radius: 8px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 100%;
+  left: 0;
+  padding: 10px 0;
+  backdrop-filter: blur(5px);
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+  transition: 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(20, 255, 236, 0.2);
+  color: #14ffec;
+}
+
+.dropdown-menu:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-menu:hover .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.music-player {
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  margin-top: 9rem;
+  color: white;
+}
+
+.album-section {
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.album-art {
+  width: 40%;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+}
+
+.song-info {
+  text-align: center;
+}
+
+.song-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.song-artist {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.song-description {
+  color: #cecece;
+  line-height: 1.6;
+  max-width: 300px;
+}
+
+.lyrics-section {
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 2rem;
+  background-color: #141414;
+  border-radius: 20px;
+  width: 600px;
+}
+
+.lyrics-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #555555;
+}
+
+.lyrics-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-right: 10px;
+  line-height: 2;
+  white-space: pre-line;
+  margin-bottom: 20px;
+}
+
+.player-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.progress-container {
+  width: 100%;
+  height: 5px;
+  background-color: #464646;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #ffffff;
+  border-radius: 5px;
+  width: 0%;
+}
+
+.time-display {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #777;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.control-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #555;
+  transition: all 0.2s;
+}
+
+.control-btn:hover {
+  color: #333;
+  transform: scale(1.1);
+}
+
+.play-btn {
+  background-color: #ffffff;
+  color: #141414;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.play-btn:hover {
+  background-color: #14ffec;
+}
+
+.repeat-btn.active {
+  color: #14ffec;
+}
+
+.scroll-down > .navbar {
+  transform: translate3d(0, -200%, 0);
+}
+
+/* Responsive*/
+@media (max-width: 800px) {
+  .music-player {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .album-section,
+  .lyrics-section {
+    padding: 20px;
+  }
+
+  .album-art {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 500px) {
+  .controls {
+    gap: 15px;
+  }
+
+  .song-title {
+    font-size: 20px;
+  }
+
+  .song-artist {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+    width: 90%;
+    left: 2%;
+    top: 3%;
+  }
+
+  .navbar .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .navbar .menu.active {
+    display: flex;
+  }
+
+  .navbar .menu a {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .dropdown-content {
+    position: static;
+    display: none;
+    width: 100%;
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  .dropdown-menu:hover .dropdown-content {
+    display: none;
+  }
+
+  .dropdown-menu.active .dropdown-content {
+    display: block;
+  }
+
+  .navbar button {
+    display: none;
+  }
+
+  .btn-register {
+    display: contents;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+  }
+
+  .hamburger .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    transition: all 0.3s ease;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+
+  .navbar .menu {
+    display: flex !important;
+  }
+}

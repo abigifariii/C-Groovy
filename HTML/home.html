@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C’Groovy - Music Streaming</title>
+    <link rel="stylesheet" href="../CSS/home.css" />
+    <script src="../JavaScript/jquery-3.6.0.min (1).js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="navbar">
+      <h1><span>C</span>'Groovy</h1>
+
+      <div class="hamburger" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+      <div class="menu" id="menu">
+        <a href="" class="active">Home</a>
+        <a href="../HTML/About Us.html">About Us</a>
+        <div class="dropdown-menu">
+          <a href="../HTML/Song Collection.html" class="dropdown-toggle">Song Collection <i class="dropdown-arrow">▼</i></a>
+          <div class="dropdown-content">
+            <a href="">Pop</a>
+            <a href="">R&B</a>
+            <a href="">K-Pop</a>
+          </div>
+        </div>
+        <a href="./Registration.html" class="btn-register">Register</a>
+      </div>
+      <a href="./Registration.html"><button>Register</button></a>
+    </div>
+
+    <section class="hero">
+      <img src="../Asset/background.png" alt="" />
+      <div class="hero-text">
+        <h1>Where Music Meets You</h1>
+        <p>Explore millions of songs tailored to your taste, mood, and moments. With C’Groovy, music becomes more than sound it becomes your story.</p>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="section-heading">
+        <h1>OUR TOP FEATURES</h1>
+        <p>
+          C'Groovy is your go to music companion, offering seamless streaming, personalized recommendations, and a dynamic music community. Whether you’re discovering fresh hits or revisiting timeless classics, CGroovy brings music to your
+          world like never before.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="icon-feature">
+            <img src="../Asset/feature-1.png" alt="" />
+          </div>
+          <h3>Discover Millions of Songs</h3>
+          <p>From global hits to indie favorites, explore a vast library that keeps growing every day.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="icon-feature">
+            <img src="../Asset/Frame 105.png" alt="" />
+          </div>
+          <h3>Seamless Sync Across Devices</h3>
+          <p>Switch effortlessly between your phone, tablet, and laptop your music, always with you.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="icon-feature">
+            <img src="../Asset/Frame 106.png" alt="" />
+          </div>
+          <h3>Personalized Music Recommendations</h3>
+          <p>Wherever you got online, we got your back, you only need one account to sync through all your devices.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="recommendation-section">
+      <h2 class="section-title">Recommendation Songs</h2>
+
+      <div class="music-card">
+        <button id="prev-btn"><</button>
+        <div class="music-img">
+          <a href="https://youtu.be/9t3xxOAMh4Q?si=7r-gZMlnPt4CIYZP"><img id="banner" src="../Asset/banner1.png" alt="" /></a>
+
+          <div class="slider-dots"></div>
+        </div>
+
+        <button id="next-btn">></button>
+      </div>
+    </section>
+
+    <section class="popular-songs">
+      <h1>Popular Songs</h1>
+
+      <div class="songs-container">
+        <div class="song-card">
+          <a href=""><img src="../Asset/about you.png" alt="" /></a>
+          <div class="song-header">
+            <h3 class="song-title">About You</h3>
+            <p class="artist">The 1975</p>
+          </div>
+        </div>
+
+        <div class="song-card">
+          <a href="./Detail Music.html"><img src="../Asset/Lany.png" alt="" /></a>
+          <div class="song-header">
+            <h3 class="song-title">‘Cause You Have To</h3>
+            <p class="artist">Lany</p>
+          </div>
+        </div>
+
+        <div class="song-card">
+          <a href=""><img src="../Asset/coldplay.png" alt="" /></a>
+          <div class="song-header">
+            <h3 class="song-title">Yellow</h3>
+            <p class="artist">Coldplay</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="music-container">
+      <section class="listened-section">
+        <h2 class="section-title">Most Recommended</h2>
+
+        <div class="top-albums">
+          <div class="top-album">
+            <p class="rank">01</p>
+            <img src="../Asset/the wekkend.png" alt="" />
+            <div class="album-info">
+              <h3 class="album-title">Dawn FM</h3>
+              <p class="album-artist">The Wekkend</p>
+              <div class="years">
+                <p>2022</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="top-album">
+            <p class="rank">02</p>
+            <img src="../Asset/Tulus.png" alt="" />
+            <div class="album-info">
+              <h3 class="album-title">Manusia</h3>
+              <p class="album-artist">Tulus</p>
+              <div class="years">
+                <p>2022</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="top-album">
+            <p class="rank">03</p>
+            <img src="../Asset/Lany.png" alt="" />
+            <div class="album-info">
+              <h3 class="album-title">a Beautiful Blur</h3>
+              <p class="album-artist">Lany</p>
+              <div class="years">
+                <p>2023</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="top-album">
+            <p class="rank">04</p>
+            <img src="../Asset/about you.png" alt="" />
+            <div class="album-info">
+              <h3 class="album-title">The 1975</h3>
+              <p class="album-artist">The 1975</p>
+              <div class="years">
+                <p>2022</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="listened-section">
+        <h2 class="section-title">Most Listened</h2>
+
+        <div class="top-albums">
+          <div class="top-album">
+            <p class="rank">01</p>
+            <img src="../Asset/the wekkend.png" alt="" />
+            <div class="album-info">
+              <h3 class="album-title">Dawn FM</h3>
+              <p class="album-artist">The Wekkend</p>
+              <div class="years">
+                <p>2022</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="top-album">
+            <p class="rank">02</p>
+            <img src="../Asset/Tulus.png" alt="" />
+            <div class="album-info">
+              <h3 class="album-title">Manusia</h3>
+              <p class="album-artist">Tulus</p>
+              <div class="years">
+                <p>2022</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="top-album">
+            <p class="rank">03</p>
+            <img src="../Asset/Lany.png" alt="" />
+            <div class="album-info">
+              <h3 class="album-title">a Beautiful Blur</h3>
+              <p class="album-artist">Lany</p>
+              <div class="years">
+                <p>2023</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="top-album">
+            <p class="rank">04</p>
+            <img src="../Asset/about you.png" alt="" />
+            <div class="album-info">
+              <h3 class="album-title">The 1975</h3>
+              <p class="album-artist">The 1975</p>
+              <div class="years">
+                <p>2022</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-column logo-column">
+          <div><span>C</span>'Groovy</div>
+          <div class="contact-info">
+            <p>Contact Us</p>
+            <p>support@cgroovy.com</p>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h3>Menu</h3>
+          <ul>
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="./About Us.htm">About Us</a></li>
+            <li><a href="./Song Collection.html">Song Collection</a></li>
+            <li><a href="./Registration.html">Register</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Help</h3>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><img src="../Asset/face book.png" alt="" /></a>
+            <a href="#"><img src="../Asset/twitter.png" alt="" /></a>
+            <a href="#"><img src="../Asset/instagram.png" alt="" /></a>
+            <a href="#"><img src="../Asset/youtub.png" alt="" /></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright">© 2024 C'Groovy. All Rights Reserved.</div>
+    </footer>
+
+    <script src="../JavaScript/home.js"></script>
+  </body>
+</html>
